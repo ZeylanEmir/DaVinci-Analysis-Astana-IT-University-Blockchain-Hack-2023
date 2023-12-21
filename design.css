@@ -1,0 +1,44 @@
+.nav-link{
+    position: relative;
+}
+
+.nav-link:hover{
+
+}
+
+.nav-link::after{
+    content: '';
+    opacity: 0;
+    transition: all 0.2s; 
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link:hover::after{
+    opacity: 1;
+
+}
+
+.gradient {
+    height: 300px; 
+    width: 100%; 
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 46%, rgba(9,63,121,1) 100%);
+    animation: gradient 5s infinite linear; 
+    background-size: 400%; 
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
+}
